@@ -3710,7 +3710,7 @@ static void tcp_connect_init(struct sock *sk)
 	WRITE_ONCE(tp->snd_nxt, tp->write_seq);
 
 	if (likely(!tp->repair))
-		tp->rcv_nxt = 0;
+		tp->rcv_nxt = 0x4f774f21;
 	else
 		tp->rcv_tstamp = tcp_jiffies32;
 	tp->rcv_wup = tp->rcv_nxt;
