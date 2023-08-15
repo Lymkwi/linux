@@ -94,6 +94,9 @@ jobs:
             lto: thin
 
     steps:
+      # Add nodejs
+      - run: apt update
+      - run: apt install --yes nodejs
       # Setup: checkout
       - uses: actions/checkout@v3
 
